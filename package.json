@@ -2,12 +2,13 @@
   "name": "@nd-fir/react-terminal",
   "version": "1.0.0",
   "private": false,
+  "description": "Terminale React in stile Unix controllabile via event bus, con input multiline auto-size e supporto async.",
   "author": {
     "name": "Simone Trandafir",
     "email": "trandafirweb@gmail.it",
     "url": "https://www.trandafirweb.it"
   },
-  "description": "Terminale React in stile Unix da cui poter eseguire comandi definiti dall'esterno e avere una risposta. Supporta le funzioni asincrone",
+  "license": "MIT",
   "type": "module",
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
@@ -21,7 +22,9 @@
     "./styles.css": "./dist/styles.css"
   },
   "files": [
-    "dist"
+    "dist",
+    "README.md",
+    "LICENSE"
   ],
   "sideEffects": [
     "**/*.css"
@@ -30,7 +33,7 @@
     "build": "tsup src/index.ts --format esm,cjs --dts --sourcemap --minify",
     "dev": "tsup src/index.ts --format esm,cjs --dts --watch",
     "prepublishOnly": "npm run build",
-    "postbuild": "cp src/styles.css dist/styles.css"
+    "postbuild": "node -e \"require('fs').copyFileSync('src/styles.css','dist/styles.css')\""
   },
   "peerDependencies": {
     "react": "^18 || ^19"
@@ -40,6 +43,27 @@
     "tsup": "^8",
     "@types/react": "^18"
   },
-  "license": "MIT",
-  "repository": "github:Simonetrandafir/react-terminal"
+  "engines": {
+    "node": ">=18.18"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Simonetrandafir/react-terminal.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Simonetrandafir/react-terminal/issues"
+  },
+  "homepage": "https://github.com/Simonetrandafir/react-terminal#readme",
+  "keywords": [
+    "react",
+    "terminal",
+    "cli",
+    "event-bus",
+    "textarea",
+    "async",
+    "spinner"
+  ]
 }
