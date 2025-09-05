@@ -1,7 +1,7 @@
 # @nd-fir/react-terminal
 
 Terminale React stile Unix, controllabile da fuori via **event bus**.  
-Input multiline auto-size, wrapping adattivo, supporto a funzioni asincrone, loading interno/esterno, integrazione semplice con ContextMenu.
+Input multiline auto-size, wrapping adattivo, supporto a funzioni asincrone, loading interno/esterno.
 
 ## Install
 
