@@ -1,0 +1,45 @@
+{
+  "name": "@nd-fir/react-terminal",
+  "version": "1.0.0",
+  "private": false,
+  "author": {
+    "name": "Simone Trandafir",
+    "email": "trandafirweb@gmail.it",
+    "url": "https://www.trandafirweb.it"
+  },
+  "description": "Terminale React in stile Unix da cui poter eseguire comandi definiti dall'esterno e avere una risposta. Supporta le funzioni asincrone",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./styles.css": "./dist/styles.css"
+  },
+  "files": [
+    "dist"
+  ],
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format esm,cjs --dts --sourcemap --minify",
+    "dev": "tsup src/index.ts --format esm,cjs --dts --watch",
+    "prepublishOnly": "npm run build",
+    "postbuild": "cp src/styles.css dist/styles.css"
+  },
+  "peerDependencies": {
+    "react": "^18 || ^19"
+  },
+  "devDependencies": {
+    "typescript": "^5",
+    "tsup": "^8",
+    "@types/react": "^18"
+  },
+  "license": "MIT",
+  "repository": "github:Simonetrandafir/react-terminal"
+}

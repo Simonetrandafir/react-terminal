@@ -1,0 +1,28 @@
+.terminal {
+  scrollbar-width: thin !important;
+  scrollbar-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) !important;
+}
+.terminal:hover {
+  scrollbar-width: thin !important;
+  scrollbar-color: rgba(41, 41, 41, 0.726) rgba(0, 0, 0, 0) !important;
+}
+
+/* Chromium / Safari */
+.terminal::-webkit-scrollbar {
+  width: 8px !important;
+  height: 8px !important;
+}
+.terminal::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0) !important;
+}
+.terminal::-webkit-scrollbar-thumb {
+  background-color: transparent !important;
+  border-radius: 9999px !important;
+  border: 1px solid rgba(0, 0, 0, 0) !important;
+}
+.terminal:hover::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0) !important;
+}
+.terminal::-webkit-scrollbar-corner {
+  background: rgba(0, 0, 0, 0) !important;
+}
