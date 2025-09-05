@@ -1,6 +1,6 @@
 {
   "name": "@nd-fir/react-terminal",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "private": false,
   "description": "Terminale React in stile Unix controllabile via event bus, con input multiline auto-size e supporto async.",
   "author": {
@@ -36,6 +36,9 @@
     "postbuild": "node -e \"require('fs').copyFileSync('src/styles.css','dist/styles.css')\""
   },
   "peerDependencies": {
+    "react": "^18 || ^19"
+  },
+  "dependencies": {
     "react": "^18 || ^19"
   },
   "devDependencies": {
