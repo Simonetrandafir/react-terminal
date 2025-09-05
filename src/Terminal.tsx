@@ -130,16 +130,6 @@ export default function Terminal({ prompt, run, onContextMenu, options, isLoadin
       });
       return;
     }
-
-    // Ctrl/Cmd + C: “cancel” dell’input corrente
-    if (e.key.toLowerCase() === "c" && (e.ctrlKey || e.metaKey)) {
-      e.preventDefault();
-      if (command) {
-        setHistory((prev) => [...prev, { cmd: command, response: "^C" }]);
-        setCommand("");
-        setHistoryIndex(null);
-      }
-    }
   };
 
   /* ------------------------ RENDER ------------------------ */
