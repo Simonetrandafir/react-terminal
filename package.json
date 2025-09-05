@@ -1,6 +1,6 @@
 {
   "name": "@nd-fir/react-terminal",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": false,
   "description": "Terminale React in stile Unix controllabile via event bus, con input multiline auto-size e supporto async.",
   "author": {
